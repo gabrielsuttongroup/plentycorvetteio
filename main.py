@@ -1,7 +1,7 @@
-"""crawler_7aa2f7 - File system operations."""
+"""crawler_651e86 - File system operations."""
 from pathlib import Path
 import json, tempfile
-WORKSPACE = "crawler_7aa2f7"
+WORKSPACE = "crawler_651e86"
 def scan_directory(root: Path) -> dict:
     files = list(root.rglob("*"))
     return {"root": str(root), "total": len(files), "dirs": sum(1 for f in files if f.is_dir()), "files": sum(1 for f in files if f.is_file())}

